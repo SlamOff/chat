@@ -1,0 +1,58 @@
+@media print {
+	.chat_main.dialog {
+		background-color: #e8e6e7;
+		position: relative;
+		border: 1px solid #afafaf;
+		border-bottom: 0;
+		overflow: hidden;
+		min-height: 1px;
+	}
+	.chat_main.dialog .message_wrapper.user {
+		text-align: right;
+		margin-right: 6px;
+	}
+	.chat_main.dialog .message_wrapper.user .message {
+		background-color: #4e4e4e;
+		text-align: left;
+	}
+	.chat_main.dialog .message_wrapper.operator .message {
+		background-color: #ff0000;
+		margin-left: 6px;
+	}
+	.chat_main.dialog .message {
+		position: relative;
+		color: #fff;
+		background-color: #fff;
+		border-radius: 30px;
+		padding: 15px 20px 20px;
+		max-width: 320px;
+		margin-bottom: 20px;
+		display: inline-block;
+		width: 100%;
+	}
+	.chat_main.dialog .message_wrapper.user .message:before {
+		width: 36px;
+		height: 15px;
+		content: "";
+		position: absolute;
+		right: -6px;
+		top: 0;
+		background-image: url(black_speach.png);
+	}
+	.chat_main.dialog .message_wrapper.operator .message:before {
+		width: 36px;
+		height: 15px;
+		content: "";
+		position: absolute;
+		left: -6px;
+		top: 0;
+		background-image: url(red_speach.png);
+	}
+	.chat_main.dialog .message .time {
+		position: absolute;
+		right: 12px;
+		bottom: 5px;
+		color: #fff;
+		font-size: 12px;
+	}
+}

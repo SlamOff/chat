@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8" />
+	<title>Chat</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="jquery.mCustomScrollbar.min.css">
+	
+</head>
+<body>
+	
+	<div class="chat_container">
+		<div class="chat_quit_black">
+			<div class="chat_quit">
+				<h3>Вы хотите безвозвратно покинуть чат?</h3>
+				<div class="btns">
+					<button class="btn_red quit">Да</button>
+					<button class="btn_red btn_grey no_quit">Отмена</button>
+				</div>
+			</div>
+		</div>
+		<div class="resizer"></div>
+		<nav class="chat_header">
+			<span>Онлайн-консультант</span>
+			<div class="nav_btns">
+				<button class="mute"></button>
+				<button class="roll"></button>
+				<button class="close"><span class="span1"></span><span class="span2"></span></button>
+			</div>
+		</nav>
+		<div class="chat_main chat_main_reg">
+			<div class="chat_main_wrapper">
+				<p class="form_head">Обязательные поля <span>*</span></p>
+				<form class="form" id="enter_chat">
+					<label id="name">
+						<p>Ваше имя <span>*</span></p>
+						<input name="name" type="text">
+					</label>
+					<label id="tel">
+						<p>Ваш номер телефона <span>*</span></p>
+						<input name="phone" type="tel">
+					</label>
+					<label id="email">
+						<p>E-mail адрес</p>
+						<input placeholder="ice_berg@gmail.com" name="email" type="email">
+					</label>
+					<label id="submit">
+						<p>Ваш вопрос</p>
+						<textarea placeholder="Задайте Ваш вопрос" name="message" class="textarea textarea_size" id="textarea"></textarea>
+					</label>
+					<label id="checkbox">
+						<p>Подтверждаю согласие на обработку своих персональтных данных</p>
+						<input class="chat_checkbox" type="checkbox" name="checkbox">
+						<span class="mask"></span>
+					</label>
+					<button class="btn_red submit" type="submit">Начать чат</button>
+				</form>
+			</div>
+		</div>
+		<div class="chat_main chat_main_message">
+			<div class="chat_main_wrapper">
+				<div class="chat_dialog">
+					<div class="message_wrapper user">
+						<div class="message">
+							123
+							<span class="time">17:57</span>
+						</div>
+					</div>
+					<div class="message_wrapper operator">
+						<div class="message">
+							122222222222222423 122222222222222423 122222222222222423 122222222222222423
+							<span class="time">17:57</span>
+						</div>
+					</div>
+					<div class="message_wrapper user">
+						
+						<div class="message">
+							122222222222222423 122222222222222423 122222222222222423 122222222222222423
+							<span class="time">17:57</span>
+						</div>
+					</div>
+					<div class="message_wrapper operator">
+						<div class="message">
+							122222222222222423 122222222222222423 122222222222222423 122222222222222423
+							<span class="time">17:57</span>
+						</div>
+					</div>
+					<div class="message_wrapper user">
+						
+						<div class="message">
+							122222222222222423 122222222222222423 122222222222222423 122222222222222423
+							<span class="time">17:57</span>
+						</div>
+					</div>
+					<div class="message_wrapper operator">
+						<div class="message">
+							122222222222222423 122222222222222423 122222222222222423 122222222222222423
+							<span class="time">17:57</span>
+						</div>
+					</div>
+					<div class="message_wrapper user">
+						
+						<div class="message">
+							122222222222222423 122222222222222423 122222222222222423 122222222222222423
+							<span class="time">17:57</span>
+						</div>
+					</div>
+					<div class="message_wrapper operator">
+						<div class="message">
+							123
+							<span class="time">17:57</span>
+						</div>
+					</div>
+					<div class="thanks">
+						<h3>Вы завершили чат</h3>
+						<p>Спасибо за Ваше обращение, просим оценить качество обслуживания эксперта. Это займет не более 5 минут Вашего времени</p>
+						<button id="rate" class="btn_red">Далее</button>
+						<button id="mail" class="btn_red btn_grey">Отправить на E-mail</button>
+					</div>
+				</div>
+			</div>
+			
+			<div class="chat_footer">
+				<div class="chat_user_message">
+					<span class="typing">... оператор печатает</span>
+					<div class="disconnect">Связь прервана! Обновите соединение.</div>
+					<!-- <input placeholder="Введите Ваше сообщение" type="text"> -->
+					<!-- <textarea class="input"></textarea> -->
+					<div class="input" contenteditable="true">Введите Ваше сообщение</div>
+					<div class="send"><div class="send_inner"></div></div>
+				</div>
+				<div class="chat_user_btns">
+					<div class="footer_icons">
+						<div class="smile_container">
+							<a class="smile smile_1" href=""></a>
+							<a class="smile smile_2" href=""></a>
+							<a class="smile smile_3" href=""></a>
+							<a class="smile smile_4" href=""></a>
+							<a class="smile smile_5" href=""></a>
+							<a class="smile smile_6" href=""></a>
+							<a class="smile smile_7" href=""></a>
+							<a class="smile smile_8" href=""></a>
+							<a class="smile smile_9" href=""></a>
+							<a class="smile smile_10" href=""></a>
+							<a class="smile smile_11" href=""></a>
+							<a class="smile smile_12" href=""></a>
+							<a class="smile smile_13" href=""></a>
+							<a class="smile smile_14" href=""></a>
+							<a class="smile smile_15" href=""></a>
+							<a class="smile smile_16" href=""></a>
+							<a class="smile smile_17" href=""></a>
+							<a class="smile smile_18" href=""></a>
+						</div>
+						<img class="chat_smiles" src="img/footer_icon_1.png" alt="">
+						<img class="chat_pict" src="img/footer_icon_2.png" alt="">
+						<img class="chat_download" src="img/footer_icon_3.png" alt="">
+						<img class="chat_location" src="img/footer_icon_4.png" alt="">
+						<img class="chat_print" src="img/footer_icon_5.png" alt="">
+					</div>
+					<div class="chat_end">Завершить чат</div>
+				</div>
+			</div>
+		</div>
+		<div class="chat_main chat_main_rating">
+			<div class="rating first_rating">
+				<div class="chat_step">
+					
+					<div class="step done">1</div>
+					<div class="step">2</div>
+					<div class="step">3</div>
+					<div class="step">4</div>
+					<div class="step">5</div>
+					<div class="step_line"></div>
+				</div>
+				<h3>Оценка качества обслуживания</h3>
+				<p>Основываясь на Вашем обращении к нашим специалистам, насколько вероятно, что Вы порекомендуете компанию Vodafone друзьям и знакомым?</p>
+				<div class="stars">
+					<div class="star"><span>0</span></div>
+					<div class="star"><span>1</span></div>
+					<div class="star"><span>2</span></div>
+					<div class="star"><span>3</span></div>
+					<div class="star"><span>4</span></div>
+					<div class="star"><span>5</span></div><br class="divider">
+					<div class="star"><span>6</span></div>
+					<div class="star"><span>7</span></div>
+					<div class="star"><span>8</span></div>
+					<div class="star"><span>9</span></div>
+					<div class="star"><span>10</span></div>
+				</div>
+				<textarea placeholder="Добавить комментарий" name="message" class="textarea textarea2" id="textarea"></textarea>
+				<button id="next_rate" class="btn_red">Далее</button>
+			</div>
+			<div class="next_rating rating">
+				<div class="chat_step">
+					<div class="step done">1</div>
+					<div class="step done">2</div>
+					<div class="step">3</div>
+					<div class="step">4</div>
+					<div class="step">5</div>
+					<div class="step_line"></div>
+				</div>
+				<h3>Оценка качества обслуживания</h3>
+				<p style="margin: 60px auto;">Ваш вопрос решен?</p>
+				<div class="rate_buttons">
+					<button class="final_rate btn_red">Да</button>
+					<button class="final_rate btn_red btn_grey">Нет</button>
+				</div>
+			</div>
+			<div class="rating2 rating">
+				<div class="chat_step">
+					<div class="step done">1</div>
+					<div class="step done">2</div>
+					<div class="step">3</div>
+					<div class="step">4</div>
+					<div class="step">5</div>
+					<div class="step_line"></div>
+				</div>
+				<h3>Еще вопрос .</h3>
+				<p style="margin: 60px auto;">Какой-нибудь вопрос</p>
+				<div class="rate_buttons">
+					<button class="rate_2 btn_red">Далее</button>
+				</div>
+			</div>
+			<div class="rating3 rating">
+				<div class="chat_step">
+					<div class="step done">1</div>
+					<div class="step done">2</div>
+					<div class="step done">3</div>
+					<div class="step">4</div>
+					<div class="step">5</div>
+					<div class="step_line"></div>
+				</div>
+				<h3>Еще вопрос ..</h3>
+				<p style="margin: 60px auto;">Какой-нибудь вопрос</p>
+				<div class="rate_buttons">
+					<button class="rate_3 btn_red">Далее</button>
+				</div>
+			</div>
+			<div class="rating4 rating">
+				<div class="chat_step">
+					<div class="step done">1</div>
+					<div class="step done">2</div>
+					<div class="step done">3</div>
+					<div class="step done">4</div>
+					<div class="step">5</div>
+					<div class="step_line"></div>
+				</div>
+				<h3>Еще вопрос ...</h3>
+				<p style="margin: 60px auto;">Какой-нибудь вопрос</p>
+				<div class="rate_buttons">
+					<button class="rate_4 btn_red">Далее</button>
+				</div>
+			</div>
+			<div class="rating5 rating">
+				<div class="chat_step">
+					<div class="step done">1</div>
+					<div class="step done">2</div>
+					<div class="step done">3</div>
+					<div class="step done">4</div>
+					<div class="step done">5</div>
+					<div class="step_line"></div>
+				</div>
+				<h3>Последний вопрос</h3>
+				<p style="margin: 60px auto;">Какой-нибудь вопрос</p>
+				<div class="rate_buttons">
+					<button class="rate_5 btn_red">Далее</button>
+				</div>
+			</div>
+			<div class="final_rating rating">
+				<h3>Оценка качества обслуживания</h3>
+				<img src="img/end.png" alt="">
+				<p>Благодарим Вас за оценку нашей работы. Всего Вам доброго</p>
+				<textarea placeholder="Добавить комментарий" name="message" class="textarea textarea2" id="textarea"></textarea>
+				<button class="btn_red">Отправить</button>
+				<span>Решить еще один вопрос</span>
+			</div>
+		</div>
+	</div>
+	
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="jquery.mCustomScrollbar.min.js"></script>
+	<script src="jquery.validate.min.js"></script>
+	<script src="autosize.js"></script>
+	<script src="main.js"></script>
+
+</body>
+</html>
