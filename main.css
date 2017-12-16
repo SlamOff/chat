@@ -1,5 +1,4 @@
-
-+@font-face {
+@font-face {
 	font-family: "Vodafone";
 	src: url("fonts/vodafonerg.ttf") format("truetype");
 	font-weight: normal;
@@ -28,6 +27,7 @@
 }
 .chat_container {
 	font-family: "Vodafone", sans-serif;
+	display: none;
 }
 .chat_container input::-webkit-input-placeholder,
 .chat_container textarea::-webkit-input-placeholder {

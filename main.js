@@ -1,7 +1,10 @@
 $(document).ready(function() {
-
-	// Контейнер
 	var container = $('.chat_container');
+	$('.start').click(function(){
+		container.show();
+	});
+	// Контейнер
+	
 
 	// Содержимое чата (ВСЕ)
 	var chatAll = $('.chat_main');
@@ -50,11 +53,15 @@ $(document).ready(function() {
 			//$('star br').hide();
 			$(this).css('border', '0');
 			this.innerHTML = '<img src="img/unroll.png">';
+			container.height('auto');
 		}
 		else{
 			//checkHeight();
 			$(this).css('border-bottom', '1px solid #fff');
 			this.innerHTML = '';
+			if($(window).width() < 576){
+				container.height('100%');
+			}
 		}
 	});
 		// завершение/возобновление чата
