@@ -8,10 +8,29 @@
 	<link rel="stylesheet" href="reset.css">
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="jquery.mCustomScrollbar.min.css">
-	
+	<style>
+		ul {
+			text-align: justify;
+		}
+		ul:after {
+			content: "";
+			width: 100%;
+			display: inline-block;
+		}
+		ul li {
+			display: inline-block;
+		}
+	</style>
 </head>
 <body>
-	
+	<ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li class="helper"></li>
+	</ul>
 	<div class="chat_container">
 		<div class="chat_quit_black">
 			<div class="chat_quit">
@@ -24,7 +43,7 @@
 		</div>
 		<div class="resizer"></div>
 		<nav class="chat_header">
-			<span>Онлайн-консультант</span>
+			<span class="chat_title"><span class="indicator red"></span>Онлайн-консультант</span>
 			<div class="nav_btns">
 				<button class="mute"></button>
 				<button class="roll"></button>
@@ -172,7 +191,6 @@
 					<div class="step">2</div>
 					<div class="step">3</div>
 					<div class="step">4</div>
-					<div class="step">5</div>
 					<div class="step_line"></div>
 				</div>
 				<h3>Оценка качества обслуживания</h3>
@@ -190,7 +208,11 @@
 					<div class="star"><span>9</span></div>
 					<div class="star"><span>10</span></div>
 				</div>
-				<textarea placeholder="Добавить комментарий" name="message" class="textarea textarea2" id="textarea"></textarea>
+				<textarea placeholder="Добавить комментарий" name="message" class="textarea textarea_size" id="textarea"></textarea>
+				<ul class="explain">
+					<li><b>0</b> - точно не порекомендую </li>
+					<li><b>10</b> - точно порекомендую</li>
+				</ul>
 				<button id="next_rate" class="btn_red">Далее</button>
 			</div>
 			<div class="next_rating rating">
@@ -199,7 +221,6 @@
 					<div class="step done">2</div>
 					<div class="step">3</div>
 					<div class="step">4</div>
-					<div class="step">5</div>
 					<div class="step_line"></div>
 				</div>
 				<h3>Оценка качества обслуживания</h3>
@@ -215,7 +236,6 @@
 					<div class="step done">2</div>
 					<div class="step">3</div>
 					<div class="step">4</div>
-					<div class="step">5</div>
 					<div class="step_line"></div>
 				</div>
 				<h3>Еще вопрос .</h3>
@@ -230,7 +250,6 @@
 					<div class="step done">2</div>
 					<div class="step done">3</div>
 					<div class="step">4</div>
-					<div class="step">5</div>
 					<div class="step_line"></div>
 				</div>
 				<h3>Еще вопрос ..</h3>
@@ -240,40 +259,26 @@
 				</div>
 			</div>
 			<div class="rating4 rating">
+				<h3>Оценка качества обслуживания</h3>
 				<div class="chat_step">
 					<div class="step done">1</div>
 					<div class="step done">2</div>
 					<div class="step done">3</div>
 					<div class="step done">4</div>
-					<div class="step">5</div>
 					<div class="step_line"></div>
 				</div>
-				<h3>Еще вопрос ...</h3>
-				<p style="margin: 60px auto;">Какой-нибудь вопрос</p>
+				<img class="briefs" src="img/briefs.png" alt="">
+				<p style="margin: 60px auto;">Ваш вопрос решен?</p>
 				<div class="rate_buttons">
-					<button class="rate_4 btn_red">Далее</button>
-				</div>
-			</div>
-			<div class="rating5 rating">
-				<div class="chat_step">
-					<div class="step done">1</div>
-					<div class="step done">2</div>
-					<div class="step done">3</div>
-					<div class="step done">4</div>
-					<div class="step done">5</div>
-					<div class="step_line"></div>
-				</div>
-				<h3>Последний вопрос</h3>
-				<p style="margin: 60px auto;">Какой-нибудь вопрос</p>
-				<div class="rate_buttons">
-					<button class="rate_5 btn_red">Далее</button>
+					<button class="rate_4 btn_red btns_inline">Далее</button>
+					<button class="rate_4 btn_red btn_grey btns_inline">Нет</button>
 				</div>
 			</div>
 			<div class="final_rating rating">
 				<h3>Оценка качества обслуживания</h3>
 				<img src="img/end.png" alt="">
 				<p>Благодарим Вас за оценку нашей работы. Всего Вам доброго</p>
-				<textarea placeholder="Добавить комментарий" name="message" class="textarea textarea2" id="textarea"></textarea>
+				<textarea placeholder="Добавить комментарий" name="message" class="textarea textarea_size" id="textarea"></textarea>
 				<button class="btn_red">Отправить</button>
 				<span>Решить еще один вопрос</span>
 			</div>

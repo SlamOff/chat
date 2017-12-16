@@ -108,10 +108,27 @@ $(document).ready(function() {
 		newContent(rating3, rating4);
 	});
 	container.on('click', '.rate_4', function(){
-		newContent(rating4, rating5);
+		newContent(rating4, ratingFinal);
 	});
-	container.on('click', '.rate_5', function(){
-		newContent(rating5, ratingFinal);
+	container.on('click', '.done', function(){
+		switch (this.textContent) {
+			case '1':
+				$(this).closest('.rating').hide();
+				rating.show();
+				break;
+			case '2':
+				$(this).closest('.rating').hide();
+				rating2.show();
+				break;
+			case '3':
+				$(this).closest('.rating').hide();
+				rating3.show();
+				break;
+			case '4':
+				$(this).closest('.rating').hide();
+				rating4.show();
+				break;
+		}
 	});
 
 	// оценка оператора
@@ -171,54 +188,53 @@ $(document).ready(function() {
 		var validationPhone = "Неправильный формат номера";
 		var validationEmail = "Введите корректный E-mail";
 	}
-	// $('.form').validate({
-	// 	errorPlacement: function(error, element) {
-	// 		if (element.attr("name") == "name" ){
-	// 			error.insertAfter(".form #name p");
-	// 		}
-	// 		else if (element.attr('name') == 'phone' ){
-	// 			error.insertAfter('.form #tel p');
-	// 		}
-	// 	},
-	// 	rules: {
-	// 		name: {
-	// 			required: true,
-	// 			minlength: 2,
-	// 			maxlength: 16
-	// 		},
-	// 		phone: {
-	// 			required: true,
-	// 			digits: true
-	// 		},
-	// 		email: {
-	// 			required: true,
-	// 			email: true
-	// 		},
-	// 		checkbox: {
-	// 			required: true
-	// 		}
-	// 	},
-	// 	messages: {
-	// 		name: {
-	// 			required: validationName,
-	// 			minlength: validationNameMax,
-	// 			maxlength: validationNameMax
-	// 		},
-	// 		email: {
-	// 			required: validationNameMax,
-	// 			email: validationEmail
-	// 		},
-	// 		phone: {
-	// 			required: validationName,
-	// 			digits: validationPhone
-	// 		}
-	// 	}
-	// });
+	$('.form').validate({
+		errorPlacement: function(error, element) {
+			if (element.attr("name") == "name" ){
+				error.insertAfter(".form #name p");
+			}
+			else if (element.attr('name') == 'phone' ){
+				error.insertAfter('.form #tel p');
+			}
+		},
+		rules: {
+			name: {
+				required: true,
+				minlength: 2,
+				maxlength: 16
+			},
+			phone: {
+				required: true,
+				digits: true
+			},
+			email: {
+				required: true,
+				email: true
+			},
+			checkbox: {
+				required: true
+			}
+		},
+		messages: {
+			name: {
+				required: validationName,
+				minlength: validationNameMax,
+				maxlength: validationNameMax
+			},
+			email: {
+				required: validationNameMax,
+				email: validationEmail
+			},
+			phone: {
+				required: validationName,
+				digits: validationPhone
+			}
+		}
+	});
 	
 	var checkBox = $('#checkbox input');
 
 	$('#checkbox').click(function(){
-		//console.log(checkBox.is(':checked'));
 		if(checkBox.is(':checked')){
 			$(this).find('.mask').css('background-color', '#afafaf');
 		}
@@ -226,9 +242,6 @@ $(document).ready(function() {
 			$(this).find('.mask').css('background-color', '#fff');
 		}
 	});
-
-	// ресайз текстареа
-	// autosize($('.textarea_size'));
 
 	
 	$('body').on('click', '.smile_container', function(e){
